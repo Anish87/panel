@@ -1,0 +1,150 @@
+/* @import */
+@import url('http://fonts.cdnfonts.com/css/bulletproof-bb');
+@import url('http://fonts.cdnfonts.com/css/uni-sans');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+
+/* @styles */
+.banner{
+    background: #0A373A url('https://i.pinimg.com/originals/12/30/64/12306419febac20534eb1a1e5fa861e5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 16vw;
+    transition: all 0.3s ease;
+}
+
+.bg-vgreen{
+    background-color: #0A373A;
+}
+
+.border-vgreen{
+    border-width: 2px !important;
+    border-color: #0A373A !important;
+}
+
+.bg-vyellow{
+    background-color: #E2D9A2;
+}
+
+.bg-cblack{
+    background-color: #111;
+}
+
+.bg-cblack2{
+    background-color: #090909;
+}
+
+.vfont{
+    font-family: 'Bulletproof BB', sans-serif;
+    color: #E2D9A2 !important;
+}
+
+.vfont-inv{
+    font-family: 'Bulletproof BB', sans-serif;
+    color: #0A373A !important;
+}
+
+.vfont-d{
+    font-family: 'Bulletproof Deco BB', sans-serif;
+}
+
+.fontfam-m{
+    font-family: 'Signika', sans-serif;
+}
+
+.cblack-focus:focus{
+    background: #090909;
+    box-shadow: none;
+}
+
+.text-ov{
+    color: rgb(222, 76, 102);
+}
+
+.text-ov:hover{
+    color: rgb(223, 54, 85)
+}
+
+.btn-blurple{
+    color: #7289DA;
+    background: none;
+}
+
+.btn-blurple:hover{
+    background: #7289DA;
+    color: #FFF !important;
+}
+
+.btn-blurple-alt{
+    color: #fff;
+    background: #7289DA;
+}
+
+.btn-blurple-alt:hover{
+    color: #fff;
+    background: #647edd;
+}
+
+.btn-blurple-alt:disabled{
+    color: #fff;
+    background: #7289DA !important;
+}
+
+.blurple-append{
+    cursor: default !important;
+}
+
+.blurple-append:hover{
+    background: #7289DA;
+    cursor: default !important;
+}
+
+.btn-blurple-alt2{
+    color: #fff;
+    background: #647edd;
+    font-family: 'Uni Sans Demo', sans-serif;
+    font-weight: 700;
+}
+
+.btn-blurple-alt2:hover{
+    color: #fff;
+    background: #5b77dd;
+}
+
+.forum-append{
+    cursor: default !important;
+}
+
+.forum-append:hover{
+    cursor: default !important;
+    background: #3490dc;
+}
+
+.btn-dark2{
+    background: #212121 !important;
+}
+
+.btn-dark2:hover{
+    background: #191919 !important;
+}
+
+.btn-dark2-append{
+    background: #191919 !important;
+    cursor: default !important;
+}
+
+.btn-dark-append{
+    background: #262626 !important;
+    cursor: default !important;
+}
+
+.profile-append:hover{
+    cursor: default !important;
+    background: #38c172;
+}
+
+.font-unisans{
+    font-family: 'Uni Sans Demo', sans-serif;
+    font-weight: 800;
+}
