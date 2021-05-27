@@ -52,9 +52,9 @@ function CopRank($skills) {
                         <table class="table table-borderless text-light">
                             <thead>
                                 <tr>
-                                    <th>Statistic</th>
+                                    <th>Stat</th>
                                     <th>Value</th>
-                                    <th>Rank Name(if available)</th>
+                                    <th>Rank Tag</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -78,8 +78,18 @@ function CopRank($skills) {
                                 <h5>Player</h5>
                             </div>
                         @endif
+                        @if($pData['rDon'])
+                            <div class="bg-vgreen vfont text-center p-1 pb-md-0 rounded">
+                                <h5>Donator</h5>
+                            </div>
+                        @endif
+                        @if($pData['rCon'])
+                            <div class="bg-vgreen vfont text-center p-1 pb-md-0 rounded">
+                                <h5>Contributor</h5>
+                            </div>
+                        @endif
                         @if($pData['pLvl'] > 1)
-                        <div class="btn-group">
+                        <div class="btn-group mx-auto">
                             <button class="btn btn-primary forum-append d-flex justify-content-center align-items-center border-0"><i class="fas fa-user-cog fa-lg"></i></button>
                             <a href="discord" class="btn btn-dark2 text-light border-0 forum-btn">
                                 <span>Staff Panel</span>
@@ -87,7 +97,7 @@ function CopRank($skills) {
                         </div>
                         @endif
                         @if($pData['pLvl'] > 6)
-                        <div class="btn-group">
+                        <div class="btn-group mx-auto">
                             <button class="btn btn-primary forum-append d-flex justify-content-center align-items-center border-0"><i class="fas fa-user-cog fa-lg"></i></button>
                             <a href="discord" class="btn btn-dark2 text-light border-0 forum-btn">
                                 <span>Manager Panel</span>
