@@ -29,7 +29,8 @@ class Profile extends Controller
                     'rPlr' => $jsonRoles->Player,
                     'rDon' => $jsonRoles->Donator,
                     'rCon' => $jsonRoles->Contributor,
-                    'pLvl' => $jsonAuth->Level
+                    'pLvl' => $jsonAuth->Level,
+                    'Online' => $jsonAuth->Online
                 ]);
                 return view('profile')->with('sessionUser', $mainCon->checkLogin())->with('playerStats', $plrData);
             }

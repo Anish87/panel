@@ -5,25 +5,25 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/"><i class="fas fa-home"></i> Home</a>
+            <li class="nav-item {{ Request::is('/') ? 'active border-bottom border-vgreen' : '' }}">
+                <a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('tops') ? 'active' : '' }}" href="tops"> <i class="fas fa-chart-bar fa-sm"></i> Top Charts</a>
+            <li class="nav-item {{ Request::is('tops') ? 'active border-bottom border-vgreen' : '' }}">
+                <a class="nav-link" href="/tops"> <i class="fas fa-chart-bar fa-sm"></i> Top Charts</a>
             </li>
             @if($sessionUser !== 'Panel Guest')
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('profile') ? 'active' : '' }}" href="profile"> <i class="fas fa-user-circle"></i>&nbsp; Profile</a>
+            <li class="nav-item {{ Request::is('user/profile') ? 'active border-bottom border-vgreen' : '' }}">
+                <a class="nav-link" href="/user/profile"> <i class="fas fa-user-circle"></i>&nbsp; Profile</a>
+            </li>
+            <li class="nav-item {{ Request::is('user/cp') ? 'active border-bottom border-vgreen' : '' }}">
+                <a class="nav-link" href="/user/cp"> <i class="fas fa-cog fa-sm"></i> Settings</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('settings') ? 'active' : '' }}" href="settings"> <i class="fas fa-cog fa-sm"></i> Settings</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-danger" href="logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+                <a class="nav-link text-danger" href="/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
             @else
-            <li class="nav-item">
-                <a href="login" class="nav-link {{ Request::is('login') ? 'active' : '' }}"><i class="fas fa-user fa-sm"></i>&nbsp; Login</a>
+            <li class="nav-item {{ Request::is('login') ? 'active border-bottom border-vgreen' : '' }}">
+                <a href="/login" class="nav-link"><i class="fas fa-user fa-sm"></i>&nbsp; Login</a>
             </li>
             @endif
         </ul>

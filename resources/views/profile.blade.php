@@ -50,7 +50,7 @@ function CopRank($skills) {
                     </div>
                     <div class="card-body mt-n4">
                         <table class="table table-borderless text-light">
-                            <thead>
+                            <thead class="h5">
                                 <tr>
                                     <th>Stat</th>
                                     <th>Value</th>
@@ -60,6 +60,8 @@ function CopRank($skills) {
                             <tbody>
                                 <tr><td><strong>Robskills</strong></td><td>{{$pData['robs']}}</td><td>{{RobberRank($pData['robs'])}}</td></tr>
                                 <tr><td><strong>Copskills</strong></td><td>{{$pData['cops']}}</td><td>{{CopRank($pData['cops'])}}</td></tr>
+                                <tr><td><strong>Cash</strong></td><td>{{$pData['cops']}}</td><td>N/A</td></tr>
+                                <tr><td><strong>Bank</strong></td><td>{{$pData['cops']}}</td><td>N/A</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -72,7 +74,7 @@ function CopRank($skills) {
                             Other Information
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body text-center mt-n3">
                         @if($pData['rPlr'])
                             <div class="bg-vgreen vfont text-center p-1 pb-md-0 rounded">
                                 <h5>Player</h5>
@@ -89,28 +91,38 @@ function CopRank($skills) {
                             </div>
                         @endif
                         @if($pData['pLvl'] > 1)
-                        <div class="btn-group mx-auto">
+                        <div class="btn-group mt-2">
                             <button class="btn btn-primary forum-append d-flex justify-content-center align-items-center border-0"><i class="fas fa-user-cog fa-lg"></i></button>
-                            <a href="discord" class="btn btn-dark2 text-light border-0 forum-btn">
+                            <a href="/admin/staff" class="btn btn-dark2 text-light border-0 forum-btn">
                                 <span>Staff Panel</span>
                             </a>
                         </div>
                         @endif
                         @if($pData['pLvl'] > 6)
-                        <div class="btn-group mx-auto">
+                        <div class="btn-group mt-2">
                             <button class="btn btn-primary forum-append d-flex justify-content-center align-items-center border-0"><i class="fas fa-user-cog fa-lg"></i></button>
-                            <a href="discord" class="btn btn-dark2 text-light border-0 forum-btn">
+                            <a href="/admin/manager" class="btn btn-dark2 text-light border-0 forum-btn">
                                 <span>Manager Panel</span>
                             </a>
                         </div>
                         @endif
-                        <table class="table table-borderless text-light">
+                        <table class="table table-borderless text-light text-left">
                             <thead>
                                 <tr>
                                     <th></th>
                                     <th></th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>In-game Status</strong></td>
+                                    @if($pData['Online'])
+                                    <td class="text-success">Online</td>
+                                    @else
+                                    <td class="text-danger">Offline</td>
+                                    @endif
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
