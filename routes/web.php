@@ -18,14 +18,16 @@ use App\Http\Controllers\Profile;
 */
 
 /* GET */
+// General
 Route::get('/', [IndexPage::class, 'returnIndex']);
 Route::get('/tops', [IndexPage::class, 'returnIndex']);
-Route::get('/user/profile', [Profile::class, 'returnDB']);
 Route::get('/login', [Login::class, 'pageView']);
-Route::get('/logout', [Logout::class, 'MainFunc']);
 Route::get('/discord', function(){
     return redirect('https://discord.gg/NPNHemw3eM');
 });
+// Important
+Route::get('/user/profile', [Profile::class, 'returnDB']);
+Route::get('/logout', [Logout::class, 'MainFunc']);
 
 /* POST */
 Route::post('/login', [Login::class, 'MainFunc']);
