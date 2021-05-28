@@ -14,6 +14,13 @@ function CopRank($skills) {
     if($skills >= 2000 && $skills <= 6000) return 'Lieutenant';
     if($skills >= 6000 && $skills <= 10000) return 'General';
 }
+function TrimClanTag($strPlayer) {
+    preg_match("([\[(=^<]+\w+[\])=^>]+)", $strPlayer, $dElim, PREG_UNMATCHED_AS_NULL);
+    preg_match("(\w.+[*=]+)", $strPlayer, $sElim, PREG_UNMATCHED_AS_NULL);
+    if($dElim != null) return $strPlayer = trim($strPlayer, $dElim[0]);
+    else if($dElim != null) return $strPlayer = trim($strPlayer, $sElim[0]);
+    else return $strPlayer;
+}
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -37,8 +44,8 @@ function CopRank($skills) {
 
         <!-- Main -->
         <div class="container-fluid">
-            <div class="row my-2">
-                <h1 class="mx-auto vfont bg-vgreen p-2 pb-md-0 rounded text-light">Hi, {{$sessionUser}}</h1>
+            <div class="row vfont mt-5 mb-3">
+                <h1 class="mx-auto bg-vgreen p-2 pb-md-0 rounded">Hi, {{$sessionUser}}</h1>
             </div>
         </div>
         <div class="row mx-5">
@@ -60,8 +67,8 @@ function CopRank($skills) {
                             <tbody>
                                 <tr><td><strong>Robskills</strong></td><td>{{$pData['robs']}}</td><td>{{RobberRank($pData['robs'])}}</td></tr>
                                 <tr><td><strong>Copskills</strong></td><td>{{$pData['cops']}}</td><td>{{CopRank($pData['cops'])}}</td></tr>
-                                <tr><td><strong>Cash</strong></td><td>{{$pData['cops']}}</td><td>N/A</td></tr>
-                                <tr><td><strong>Bank</strong></td><td>{{$pData['cops']}}</td><td>N/A</td></tr>
+                                <tr><td><strong>Cash</strong></td><td class="text-success">$ {{$pData['cops']}}</td><td>N/A</td></tr>
+                                <tr><td><strong>Bank</strong></td><td class="text-success">$ {{$pData['cops']}}</td><td>N/A</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -75,19 +82,20 @@ function CopRank($skills) {
                         </div>
                     </div>
                     <div class="card-body text-center mt-n3">
+                        <img src="https://avatars.dicebear.com/api/initials/{{substr(TrimClanTag($sessionUser), 0, 1)}}.svg?background=%230a2d3a" height="128" class="mb-4 rounded-circle">
                         @if($pData['rPlr'])
-                            <div class="bg-vgreen vfont text-center p-1 pb-md-0 rounded">
-                                <h5>Player</h5>
+                            <div class="bg-vblue vfont text-center mx-auto col-md-8 p-1 pb-md-0 rounded">
+                                <h5 class="text-light">Player</h5>
                             </div>
                         @endif
                         @if($pData['rDon'])
                             <div class="bg-vgreen vfont text-center p-1 pb-md-0 rounded">
-                                <h5>Donator</h5>
+                                <h5 class="text-light">Donator</h5>
                             </div>
                         @endif
                         @if($pData['rCon'])
                             <div class="bg-vgreen vfont text-center p-1 pb-md-0 rounded">
-                                <h5>Contributor</h5>
+                                <h5 class="text-light">Contributor</h5>
                             </div>
                         @endif
                         @if($pData['pLvl'] > 1)

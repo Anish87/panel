@@ -24,11 +24,13 @@ class Login extends Controller
         {
             $subPass = strtolower(hash('SHA256', $request->userPass));
             $dbPass  = strtolower($dbQuery->Password);
+            $jsonAuth = $dbQuery->Auth;
             if($subPass === $dbPass)
             {
                 $dbID = $dbQuery->ID;
                 $request->session()->put('userName', $request->userName);
                 $request->session()->put('userID', $dbID);
+                $request->session()->put('userLvl', $jsonAuth->Level);
                 return redirect('/');
             }
             else return view('login')->with('authErr', 'Invalid password, please try again.');
