@@ -5,11 +5,10 @@
 
 /* @styles */
 .banner{
-    background: #0A373A url('https://i.pinimg.com/originals/12/30/64/12306419febac20534eb1a1e5fa861e5.jpg');
+    background-image: url('https://i.imgur.com/KACeRPR.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: multiply;
     height: 16vw;
     transition: all 0.3s ease;
 }

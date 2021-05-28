@@ -30,7 +30,7 @@
     </div>
 </nav>
 <div class="banner d-flex justify-content-center align-items-center">
-    <div class="text-center">
+    <div class="text-center sr-only">
         <span class="text-light vfont">
             <span class="h1">Vintage Miami</span>
             <br>
