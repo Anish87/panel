@@ -13,7 +13,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
     </head>
-    <body class="bg-cblack overflow-hidden" style="width: 100%;">
+    <body class="bg-cblack2 overflow-hidden" style="width: 100%;">
         <!-- Navigation Srt -->
         @include('comp/nav')
         <!-- Navigation End -->
