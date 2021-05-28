@@ -11,8 +11,9 @@ class UserDef extends Controller
         if (session('userName'))
         {
             $sessionUser = session('userName');
+            $userLevel   = session('userLvl');
         }
-        else $sessionUser = "Panel Guest";
-        return $sessionUser;
+        else {$sessionUser = "Panel Guest"; $userLevel = 0}
+        return [$sessionUser, $userLevel];
     }
 }
