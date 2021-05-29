@@ -151,3 +151,26 @@
     font-family: 'Uni Sans Demo', sans-serif;
     font-weight: 800;
 }
+
+/* Custom Scrollbar */
+/* WIDTH */
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+/* TRACK */
+::-webkit-scrollbar-track {
+    background: #111;
+}
+  
+/* HANDLE */
+::-webkit-scrollbar-thumb {
+    background: #0a373a;
+    border-radius: 5px;
+    border: 1px #454545 solid;
+}
+  
+/* HANDLE:Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0A2D3A;
+}
