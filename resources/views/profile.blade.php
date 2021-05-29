@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="card-body text-center mt-n3">
-                        <img src="https://avatars.dicebear.com/api/initials/{{substr(TrimClanTag($sessionUser), 0, 1)}}.svg?background=%230a2d3a" height="128" class="mb-4 rounded-circle">
+                        <img src="{{GenerateAvatar(substr(TrimClanTag($sessionUser), 0, 1))}}" height="128" class="mb-4 rounded-circle">
                         @if($pData['rPlr'])
                             <div class="bg-vblue vfont text-center mx-auto col-md-8 p-1 pb-md-0 rounded">
                                 <h5 class="text-light">Player</h5>
