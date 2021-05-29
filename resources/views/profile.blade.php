@@ -98,6 +98,14 @@
                                     <td class="text-danger">Offline</td>
                                     @endif
                                 </tr>
+                                <tr>
+                                    <td><strong>Currently Banned</strong></td>
+                                    @if($pData['isBanned'])
+                                    <td class="text-danger">Yes</td>
+                                    @else
+                                    <td class="text-success">No</td>
+                                    @endif                            
+                                </tr>
                             </tbody>
                         </table>
                     </div>

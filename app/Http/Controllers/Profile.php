@@ -30,7 +30,8 @@ class Profile extends Controller
                     'rDon' => $jsonRoles->Donator,
                     'rCon' => $jsonRoles->Contributor,
                     'pLvl' => $jsonAuth->Level,
-                    'Online' => $jsonAuth->Online
+                    'Online' => $jsonAuth->Online,
+                    'isBanned' => false
                 ]);
                 return view('profile')->with('sessionUser', $mainCon->checkLogin())->with('playerStats', $plrData);
             }
