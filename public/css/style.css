@@ -101,6 +101,9 @@
 .blurple-append:hover{
     background: #7289DA;
     cursor: default !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .btn-blurple-alt2{
@@ -122,6 +125,9 @@
 .forum-append:hover{
     cursor: default !important;
     background: #3490dc;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .btn-dark2{
@@ -145,6 +151,9 @@
 .profile-append:hover{
     cursor: default !important;
     background: #38c172;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .font-unisans{

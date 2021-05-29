@@ -60,17 +60,17 @@
                     <div class="card-body text-center mt-n3">
                         <img src="{{GenerateAvatar(substr(TrimClanTag($sessionUser), 0, 1))}}" height="128" class="mb-4 rounded-circle">
                         @if($pData['rPlr'])
-                            <div class="bg-vblue vfont text-center mx-auto col-md-8 p-1 pb-md-0 rounded">
+                            <div class="bg-vblue vfont text-center mx-auto col-md-4 p-1 pb-md-0 rounded">
                                 <h5 class="text-light">Player</h5>
                             </div>
                         @endif
                         @if($pData['rDon'])
-                            <div class="bg-vgreen vfont text-center p-1 pb-md-0 rounded">
+                            <div class="bg-vgreen vfont text-center mx-auto col-md-4 p-1 pb-md-0 rounded">
                                 <h5 class="text-light">Donator</h5>
                             </div>
                         @endif
                         @if($pData['rCon'])
-                            <div class="bg-vgreen vfont text-center p-1 pb-md-0 rounded">
+                            <div class="bg-vgreen vfont text-center mx-auto col-md-4 p-1 pb-md-0 rounded">
                                 <h5 class="text-light">Contributor</h5>
                             </div>
                         @endif
