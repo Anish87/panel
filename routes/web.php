@@ -30,7 +30,7 @@ Route::get('/discord', function(){
 Route::get('/user/profile', [Profile::class, 'returnDB']);
 Route::get('/logout', [Logout::class, 'MainFunc']);
 // Staff
-Route::get('/admin/staff', [Admin::class, 'staffIndex']);
+Route::get('/admin/home', [Admin::class, 'staffIndex']);
 
 /* POST */
 Route::post('/login', [Login::class, 'MainFunc']);

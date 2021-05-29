@@ -11,7 +11,7 @@ class Admin extends Controller
         {
             if(session('userLvl') > 1)
             {
-                return view('admin.staff')->with('sessionUser', session('userName'));
+                return view('admin.home')->with('sessionUser', session('userName'));
             }
             else return response()->view('errors.403', [], 403);
         }

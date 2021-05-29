@@ -106,14 +106,6 @@ function TrimClanTag($strPlayer) {
                             </a>
                         </div>
                         @endif
-                        @if($pData['pLvl'] > 6)
-                        <div class="btn-group mt-2">
-                            <button class="btn btn-primary forum-append d-flex justify-content-center align-items-center border-0"><i class="fas fa-user-cog fa-lg"></i></button>
-                            <a href="/admin/manager" class="btn btn-dark2 text-light border-0 forum-btn">
-                                <span>Manager Panel</span>
-                            </a>
-                        </div>
-                        @endif
                         <table class="table table-borderless text-light text-left">
                             <thead>
                                 <tr>
