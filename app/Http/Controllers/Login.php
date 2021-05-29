@@ -24,7 +24,7 @@ class Login extends Controller
         {
             $subPass = strtolower(hash('SHA256', $request->userPass));
             $dbPass  = strtolower($dbQuery->Password);
-            $jsonAuth = $dbQuery->Auth;
+            $jsonAuth = json_decode($dbQuery->Auth);
             if($subPass === $dbPass)
             {
                 $dbID = $dbQuery->ID;

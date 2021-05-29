@@ -7,8 +7,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <!-- CSS -->
-        <link rel="stylesheet" href="css/app.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
         <link href="http://fonts.cdnfonts.com/css/bulletproof-bb" rel="stylesheet">
         <!-- Favicon -->
@@ -25,12 +25,15 @@
             </div>
         </div>
         <div class="my-5 text-center mx-auto">
-            <h1 class="vfont">Oops!</h1>
-            <h4 class="vfont h3">You seem to be lost. <a href="/" class="text-decoration-none text-light">Click here to go back</a></h4>
+            <h1 class="vfont-d text-danger">Unknown page!</h1>
+            <h4 class="vfont h3">You seem to be lost, let's get you back home!
+            <br>
+            <a href="/" class="text-decoration-none text-light">Click here to go back</a>
+            </h4>
         </div>
         <!-- Footer -->
         @include('comp/footer')
     <!-- Scripts -->
-    <script src="js/app.js"></script>
+    <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
