@@ -5,6 +5,7 @@ use App\Http\Controllers\IndexPage;
 use App\Http\Controllers\Login;
 use App\Http\Controllers\Logout;
 use App\Http\Controllers\Profile;
+use App\Http\Controllers\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ Route::get('/discord', function(){
 // Important
 Route::get('/user/profile', [Profile::class, 'returnDB']);
 Route::get('/logout', [Logout::class, 'MainFunc']);
+// Staff
+Route::get('/admin/staff', [Admin::class, 'staffIndex']);
 
 /* POST */
 Route::post('/login', [Login::class, 'MainFunc']);
