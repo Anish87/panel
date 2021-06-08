@@ -48,7 +48,7 @@
                     <button class="btn btn-dark2-append d-flex justify-content-center align-items-center border-0">
                         <img src="https://gamepanel.vcmp.net/assets/images/logo-sm.png" height="22">
                     </button>
-                    <a href="https://onevice.vcmp.net" class="btn btn-dark2 text-light border-0">OneVice</a>
+                    <a href="https://onevice.vcmp.net" class="btn btn-dark2 text-light border-0 font-heavitas">OneVice</a>
                 </div>
                 @if($sessionUser !== 'Panel Guest')
                 <div class="btn-group mx-2 ">

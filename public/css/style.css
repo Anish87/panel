@@ -1,6 +1,7 @@
 /* @import */
 @import url('https://fonts.cdnfonts.com/css/bulletproof-bb');
 @import url('https://fonts.cdnfonts.com/css/uni-sans');
+@import url('https://fonts.cdnfonts.com/css/heavitas');
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
 
 /* @styles */
@@ -11,6 +12,10 @@
     background-size: cover;
     height: 16vw;
     transition: all 0.3s ease;
+}
+
+.text-black{
+    color: #090909 !important;
 }
 
 .bg-vgreen{
@@ -159,6 +164,10 @@
 .font-unisans{
     font-family: 'Uni Sans Demo', sans-serif;
     font-weight: 800;
+}
+
+.font-heavitas{
+    font-family: 'Heavitas', sans-serif;
 }
 
 /* Custom Scrollbar */

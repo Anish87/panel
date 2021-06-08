@@ -11,7 +11,7 @@
             <li class="nav-item {{ Request::is('tops') ? 'active border-bottom border-vgreen' : '' }}">
                 <a class="nav-link" href="/tops"> <i class="fas fa-chart-bar fa-sm"></i> Top Charts</a>
             </li>
-            @if($sessionUser !== 'Panel Guest')
+            @if(session('userName') !== 'Panel Guest')
             <li class="nav-item {{ Request::is('user/profile') ? 'active border-bottom border-vgreen' : '' }}">
                 <a class="nav-link" href="/user/profile"> <i class="fas fa-user-circle"></i>&nbsp; Profile</a>
             </li>

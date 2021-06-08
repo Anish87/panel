@@ -13,13 +13,13 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
     </head>
-    <body class="bg-cblack2 overflow-hidden">
+    <body class="bg-cblack2">
         @include('comp/nav')
         <div class="container">
             @if($authErr ?? '')
             <div class="row d-flex justify-content-center mt-3">
-                <div class="alert alert-danger">
-                    <strong class="text-danger">Error!</strong> <span class="text-dark">{{$authErr}}</span>
+                <div class="alert alert-danger border-danger bg-danger">
+                    <strong class="text-black">Error!</strong> <span class="text-light">{{$authErr}}</span>
                 </div>
             </div>
             @endif
